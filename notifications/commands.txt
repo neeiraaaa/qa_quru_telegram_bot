@@ -1,0 +1,13 @@
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "-886143670", "text": "This is a test from qa_guru", "disable_notification": true}' \
+     https://api.telegram.org/bot5835769692:AAE9jqxrgh8lcI1RnC6epj5zQDe4VCFMqVY/sendMessage
+
+Use this token to access the HTTP API:
+5835769692:AAE9jqxrgh8lcI1RnC6epj5zQDe4VCFMqVY
+
+curl https://api.telegram.org/bot5835769692:AAE9jqxrgh8lcI1RnC6epj5zQDe4VCFMqVY/getUpdates | jq .message.chat.id
+
+"chat": "id":-886143670
+
+java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.2.1.jar
